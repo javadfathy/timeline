@@ -1,0 +1,126 @@
+.timeline{
+    margin: 100px auto;
+    background: #171717;
+    padding: 80px;
+}
+.line-timeline {
+    position: relative;
+}
+.line-timeline div.spandiv {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+
+.dem{
+    position: absolute;
+    width: 96%;
+    height: 150px;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+.dem1{
+    top: 0;
+    border-top: 4px solid #ffffff;
+    border-left: 4px solid #ffffff;
+    border-bottom: 4px solid #ffffff;
+}
+.dem2{
+    top: 150px;
+    border-right: 4px solid #ffffff;
+    border-bottom: 4px solid #ffffff;
+}
+.line-timeline div.spandiv span {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50px;
+    border: 8px solid #525050;
+    z-index: 2;
+    cursor: pointer;
+    transition: .3s ease-out;
+}
+.line-timeline div.spandiv span#timeline1 {
+    right: -10px;
+    top: -13px;
+}
+.line-timeline div.spandiv span#timeline2 {
+    left: -10px;
+    top: -13px;
+}
+.line-timeline div.spandiv span#timeline3 {
+    left: -10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+}
+.line-timeline div.spandiv span#timeline4 {
+    right: -10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.line-timeline div.spandiv span#timeline5 {
+    right: -10px;
+    bottom: -13px;
+}
+.line-timeline div.spandiv span#timeline6 {
+    left: -14px;
+    bottom: -13px;
+}
+
+
+.line-timeline div.spandiv span:hover{
+    background: black;
+    border: 11px solid white;
+}
+.line-timeline div.spandiv span.active-timeline {
+    background: black;
+    border: 11px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* timeline content css */
+.content-timeline {
+    color: white;
+    text-align: justify;
+    line-height: 2;
+    font-size: 19px;
+    padding: 25px;
+    position: relative;
+}
+
+
+.content-timeline p{
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease-in-out;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 15px;
+}
+.content-timeline p.active-content-timeline{
+    opacity: 1;
+    visibility: visible;
+
+}

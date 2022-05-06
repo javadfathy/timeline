@@ -1,126 +1,206 @@
-.timeline{
-    margin: 100px auto;
-    background: #171717;
-    padding: 80px;
-}
-.line-timeline {
-    position: relative;
-}
-.line-timeline div.spandiv {
-    width: 100%;
-    height: 300px;
-    position: relative;
-}
+ span.earth {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        right: 0;
+        left: 0;
+        display: block;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        background-image: url(http://localhost/madarnew/wp-content/uploads/2022/03/earth.png);
+        background-size: contain;
+        z-index: -1;
+        transition: 1s;
+        /*animation-timing-function: ease;*/
+        animation: earth 10s linear  infinite;
+    }
+    span.backk {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        right: -11px;
+        left: 0;
+        display: block;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        background-image: linear-gradient(-87deg, black, transparent);
+        z-index: -1;
+    }
+    @keyframes earth {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}
+    }
 
+    .line-timeline {
+        position: relative;
+    }
 
-.dem{
-    position: absolute;
-    width: 96%;
-    height: 150px;
-    margin: auto;
-    left: 0;
-    right: 0;
-}
-.dem1{
-    top: 0;
-    border-top: 4px solid #ffffff;
-    border-left: 4px solid #ffffff;
-    border-bottom: 4px solid #ffffff;
-}
-.dem2{
-    top: 150px;
-    border-right: 4px solid #ffffff;
-    border-bottom: 4px solid #ffffff;
-}
-.line-timeline div.spandiv span {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background: white;
-    border-radius: 50px;
-    border: 8px solid #525050;
-    z-index: 2;
-    cursor: pointer;
-    transition: .3s ease-out;
-}
-.line-timeline div.spandiv span#timeline1 {
-    right: -10px;
-    top: -13px;
-}
-.line-timeline div.spandiv span#timeline2 {
-    left: -10px;
-    top: -13px;
-}
-.line-timeline div.spandiv span#timeline3 {
-    left: -10px;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-
-}
-.line-timeline div.spandiv span#timeline4 {
-    right: -10px;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
-
-.line-timeline div.spandiv span#timeline5 {
-    right: -10px;
-    bottom: -13px;
-}
-.line-timeline div.spandiv span#timeline6 {
-    left: -14px;
-    bottom: -13px;
-}
-
-
-.line-timeline div.spandiv span:hover{
-    background: black;
-    border: 11px solid white;
-}
-.line-timeline div.spandiv span.active-timeline {
-    background: black;
-    border: 11px solid white;
-}
+    /* timeline content css */
+    .content-timeline {
+        color: white;
+        text-align: justify;
+        line-height: 2;
+        font-size: 19px;
+        position: relative;
+        margin-top: -57px;
+        padding-left: 81px;
+        padding-right: 0;
+    }
 
 
 
+    .content-timeline p{
+        opacity: 0.2;
+        transition: .3s ease-in-out;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        font-size: 15px;
+        padding: 8px;
+		cursor:pointer;
+    }
+    .content-timeline p.active-content-timeline{
+        opacity: 1;
+        visibility: visible;
+
+    }
+
+    .circle-timeline {
+        width: 100%;
+        height: 350px;
+        position: relative;
+    }
+    .circle-timeline  div {
+        display: inline-block;
+        border: 1px solid white;
+        border-radius: 200px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transform: rotate(0deg);
+		cursor:pointer;
+        /*transition: 5s ease;*/
+    }
+    div:nth-child(1).active-timeline{
+        border: 2px solid #e6cd70;
+    }
+    div:nth-child(1).active-timeline:before{
+        background: #e6cd70 !important;
+    }
+    div:nth-child(2).active-timeline{
+        border: 2px solid #b73a40;
+    }
+    div:nth-child(2).active-timeline:before{
+        background: #b73a40 !important;
+    }
+    div:nth-child(3).active-timeline{
+        border: 2px solid #438368;
+    }
+    div:nth-child(3).active-timeline:before{
+        background: #438368 !important;
+    }
+    div:nth-child(4).active-timeline{
+        border: 2px solid #3b5ead;
+    }
+    div:nth-child(4).active-timeline:before{
+        background: #3b5ead !important;
+    }
+    div:nth-child(5).active-timeline{
+        border: 2px solid #5e065c;
+    }
+    div:nth-child(5).active-timeline:before{
+        background: #5e065c !important;
+    }
+    .circle-timeline div:before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #6a6a6a;
+        margin: auto;
+        border-radius: 50px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .circle-timeline div:after {
+        content: "";
+        width: 30px;
+        height: 20px;
+        position: absolute;
+        z-index: 0;
+        background: #171717;
+        margin: auto;
+        border-radius: 50px;
+    }
+    .circle-timeline div:nth-child(1):after,
+    .circle-timeline div:nth-child(1):before {
+        right: 0;
+        left: 0;
+        top: -11px;
+    }
+    .circle-timeline div:nth-child(2):before,
+    .circle-timeline div:nth-child(2):after {
+        right: -275px;
+        left: 0;
+        top: 100px;
+    }
+    .circle-timeline div:nth-child(3):before,
+    .circle-timeline div:nth-child(3):after {
+        right: -130px;
+        left: 0;
+        top: 188px;
+    }
+    .circle-timeline div:nth-child(4):before,
+    .circle-timeline div:nth-child(4):after {
+        right: 104px;
+        left: 0;
+        top: 114px;
+    }
+    .circle-timeline div:nth-child(5):before,
+    .circle-timeline div:nth-child(5):after {
+        right: 63px;
+        left: 0;
+        top: 12px;
+    }
+
+    .circle-timeline div:nth-child(1) {
+        width: 360px;
+        height: 360px;
+
+    }
+
+    .circle-timeline div.active-timeline{
+        animation: circlee 5s linear  infinite;
+        /*border: 3px solid white;*/
+    }
+
+    @keyframes circlee {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}
+    }
 
 
+    .circle-timeline div:nth-child(2) {
+        width: 290px;
+        height: 290px;
+    }
 
-
-
-
-
-
-
-
-/* timeline content css */
-.content-timeline {
-    color: white;
-    text-align: justify;
-    line-height: 2;
-    font-size: 19px;
-    padding: 25px;
-    position: relative;
-}
-
-
-.content-timeline p{
-    opacity: 0;
-    visibility: hidden;
-    transition: .3s ease-in-out;
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    padding: 15px;
-}
-.content-timeline p.active-content-timeline{
-    opacity: 1;
-    visibility: visible;
-
-}
+    .circle-timeline div:nth-child(3) {
+        width: 220px;
+        height: 220px;
+    }
+    .circle-timeline div:nth-child(4) {
+        width: 150px;
+        height: 150px;
+    }
+    .circle-timeline div:nth-child(5) {
+        width: 80px;
+        height: 80px;
+    }
